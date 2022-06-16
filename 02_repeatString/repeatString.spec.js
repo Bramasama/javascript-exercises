@@ -1,4 +1,11 @@
 const repeatString = require('./repeatString')
+function repeatString(string, num)
+ if(num < 0 )
+   return '';
+ if(num ===1 )
+   return string;
+ els
+ return string + repeatString(string, num -1);
 
 describe('repeatString', () => {
   test('repeats the string', () => {
@@ -31,7 +38,7 @@ describe('repeatString', () => {
     was randomly generated. */
     expect(repeatString('hey', number).match(/((hey))/g).length).toEqual(number);
   });
-  test.skip('works with blank strings', () => {
+  test.('works with blank strings', () => {
     expect(repeatString('', 10)).toEqual('');
   });
 });
